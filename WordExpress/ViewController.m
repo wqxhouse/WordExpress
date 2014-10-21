@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "WordRepository.h"
 #import "IdentificationViewController.h"
+#import "SynonmyViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) WordRepository *repo;
@@ -38,7 +39,7 @@
 
 - (IBAction)to_sy:(id)sender
 {
-    [self performSegueWithIdentifier:@"synonmy" sender:nil];
+    [self performSegueWithIdentifier:@"Synonym" sender:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -48,9 +49,10 @@
         IdentificationViewController *vc = segue.destinationViewController;
         vc.repo = _repo;
     }
-    else if([segue.identifier isEqualToString:@"synonmy"])
+    else if([segue.identifier isEqualToString:@"Synonym"])
     {
-        
+        SynonmyViewController *vc = segue.destinationViewController;
+        vc.repo = _repo;
     }
 }
 

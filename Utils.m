@@ -16,4 +16,11 @@
     NSArray *arr = [trimmedStr componentsSeparatedByString:@","];
     return arr;
 }
+
++ (NSString *)convertNumToCharStr: (NSUInteger)number
+{
+    char ch = (char)(number + 65);
+    NSString *str = [NSString stringWithFormat:@"%c", ch];
+    return str;
+}
 @end

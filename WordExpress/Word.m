@@ -62,7 +62,7 @@ static int highest_id = 0;
 {
     NSMutableArray *mut = [[NSMutableArray alloc] init];
     
-    int rnd1 = arc4random() % 2;
+    int rnd1 = arc4random() % [self.meanings count];
     Meaning *m = self.meanings[rnd1];
    
     NSMutableArray *arr = [m.sym_arr mutableCopy];
@@ -70,12 +70,12 @@ static int highest_id = 0;
     {
         // random select
         NSUInteger rndidx = arc4random() % [arr count];
-        Word *selected1 = arr[rndidx];
-        [mut addObject:selected1.word];
+        NSString *selected1 = arr[rndidx];
+        [mut addObject:selected1];
         [arr removeObjectAtIndex:rndidx];
         
         rndidx = arc4random() % [arr count];
-        Word *selected2 = arr[rndidx];
+        NSString *selected2 = arr[rndidx];
         [mut addObject:selected2];
     }
     else

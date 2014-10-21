@@ -21,6 +21,8 @@
 		387C420919F5D88E00C41DCE /* word.csv in Resources */ = {isa = PBXBuildFile; fileRef = 387C420819F5D88E00C41DCE /* word.csv */; };
 		387C420C19F5DC4200C41DCE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420B19F5DC4200C41DCE /* Utils.m */; };
 		387C420F19F5F10A00C41DCE /* Meaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420E19F5F10A00C41DCE /* Meaning.m */; };
+		38DA44EB19F63BDA0074291A /* SynonmyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA44EA19F63BDA0074291A /* SynonmyViewController.m */; };
+		38DA44EE19F6439F0074291A /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA44ED19F6439F0074291A /* SelectionTableViewCell.m */; };
 		7218636F4D06A132ACBE600A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A858E679FAD443A8729D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,10 @@
 		387C420B19F5DC4200C41DCE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../Utils.m; sourceTree = "<group>"; };
 		387C420D19F5F10A00C41DCE /* Meaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meaning.h; sourceTree = "<group>"; };
 		387C420E19F5F10A00C41DCE /* Meaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meaning.m; sourceTree = "<group>"; };
+		38DA44E919F63BDA0074291A /* SynonmyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynonmyViewController.h; sourceTree = "<group>"; };
+		38DA44EA19F63BDA0074291A /* SynonmyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynonmyViewController.m; sourceTree = "<group>"; };
+		38DA44EC19F6439F0074291A /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
+		38DA44ED19F6439F0074291A /* SelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionTableViewCell.m; sourceTree = "<group>"; };
 		B09AABF701FE1D097562F101 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,10 @@
 				387C420619F5D1F000C41DCE /* TestEntry.m */,
 				387C420D19F5F10A00C41DCE /* Meaning.h */,
 				387C420E19F5F10A00C41DCE /* Meaning.m */,
+				38DA44E919F63BDA0074291A /* SynonmyViewController.h */,
+				38DA44EA19F63BDA0074291A /* SynonmyViewController.m */,
+				38DA44EC19F6439F0074291A /* SelectionTableViewCell.h */,
+				38DA44ED19F6439F0074291A /* SelectionTableViewCell.m */,
 			);
 			path = WordExpress;
 			sourceTree = "<group>";
@@ -227,6 +237,7 @@
 				TargetAttributes = {
 					387C41D219F5C54000C41DCE = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = DH7TSC87D2;
 					};
 					387C41EB19F5C54000C41DCE = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DA44EB19F63BDA0074291A /* SynonmyViewController.m in Sources */,
 				387C420119F5C61A00C41DCE /* WordRepository.m in Sources */,
 				387C41DF19F5C54000C41DCE /* ViewController.m in Sources */,
 				387C420419F5D0A500C41DCE /* IdentificationViewController.m in Sources */,
@@ -319,6 +331,7 @@
 				387C41FE19F5C5BB00C41DCE /* Word.m in Sources */,
 				387C420719F5D1F000C41DCE /* TestEntry.m in Sources */,
 				387C41DC19F5C54000C41DCE /* AppDelegate.m in Sources */,
+				38DA44EE19F6439F0074291A /* SelectionTableViewCell.m in Sources */,
 				387C420F19F5F10A00C41DCE /* Meaning.m in Sources */,
 				387C41D919F5C54000C41DCE /* main.m in Sources */,
 			);
@@ -443,9 +456,12 @@
 			baseConfigurationReference = 2B078D8F72231ED83C0A466D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordExpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -454,9 +470,12 @@
 			baseConfigurationReference = B09AABF701FE1D097562F101 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordExpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

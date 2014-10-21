@@ -93,10 +93,11 @@
 {
     NSMutableArray *arr = [[NSMutableArray alloc] init];
     NSArray *simArr = [word getSim];
-    if([simArr count] <= 2)
+    /*
+    if([simArr count] < 2)
     {
         return [[TestEntry alloc] init]; //empty
-    }
+    }*/
     
     [arr addObjectsFromArray:simArr];
     

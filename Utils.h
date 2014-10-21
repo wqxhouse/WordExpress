@@ -11,5 +11,5 @@
 @interface Utils : NSObject
 
 + (NSArray *)convertSymStringToArray: (NSString *)str;
-
++ (NSString *)convertNumToCharStr: (NSUInteger)number;
 @end

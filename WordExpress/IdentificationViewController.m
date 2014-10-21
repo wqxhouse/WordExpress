@@ -35,6 +35,18 @@
     [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.DLabel.tag]];
     [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.ELabel.tag]];
     
+    _ALabel.layer.masksToBounds = true;
+    _BLabel.layer.masksToBounds = true;
+    _CLabel.layer.masksToBounds = true;
+    _DLabel.layer.masksToBounds = true;
+    _ELabel.layer.masksToBounds = true;
+    
+    _ALabel.layer.cornerRadius = 16;
+    _BLabel.layer.cornerRadius = 16;
+    _CLabel.layer.cornerRadius = 16;
+    _DLabel.layer.cornerRadius = 16;
+    _ELabel.layer.cornerRadius = 16;
+    
     // Do any additional setup after loading the view.
     [self gen_data];
     [self loadUI];
@@ -82,11 +94,11 @@
                        options: UIViewAnimationOptionTransitionCrossDissolve
                     animations: ^(void)
      {
-         _ALabel.text = [@"A. " stringByAppendingString:self.entry.choices[0]];
-         _BLabel.text = [@"B. " stringByAppendingString:self.entry.choices[1]];
-         _CLabel.text = [@"C. " stringByAppendingString:self.entry.choices[2]];
-         _DLabel.text = [@"D. " stringByAppendingString:self.entry.choices[3]];
-         _ELabel.text = [@"E. " stringByAppendingString:self.entry.choices[4]];
+         _ALabel.text = [@"   A. " stringByAppendingString:self.entry.choices[0]];
+         _BLabel.text = [@"   B. " stringByAppendingString:self.entry.choices[1]];
+         _CLabel.text = [@"   C. " stringByAppendingString:self.entry.choices[2]];
+         _DLabel.text = [@"   D. " stringByAppendingString:self.entry.choices[3]];
+         _ELabel.text = [@"   E. " stringByAppendingString:self.entry.choices[4]];
      }
                     completion: ^(BOOL isFinished)
      {
@@ -117,18 +129,23 @@
     {
         NSNumber *tagNum = [NSNumber numberWithInteger: [self.entry.answers[i] intValue] + 100];
         UILabel *label = (UILabel *)[self.view viewWithTag:[tagNum intValue]];
-        [label setBackgroundColor:[UIColor colorWithRed:0.529 green:0.988 blue:0.439 alpha:1.0]];
-        [label setFont:[UIFont boldSystemFontOfSize:label.font.pointSize]];
+        [label setBackgroundColor:[UIColor colorWithRed:0.529 green:0.900 blue:0.439 alpha:0.8]];
+        [label setFont:[UIFont systemFontOfSize:label.font.pointSize]];
     }
     
     for(int i = 0; i < [self.userAnswer count]; i++)
     {
+        NSNumber *tagNum = [NSNumber numberWithInteger: [self.userAnswer[i] intValue] + 100];
+        UILabel *label = (UILabel *)[self.view viewWithTag:[tagNum intValue]];
         if(![self.entry.answers containsObject:self.userAnswer[i]])
         {
-            NSNumber *tagNum = [NSNumber numberWithInteger: [self.userAnswer[i] intValue] + 100];
-            UILabel *label = (UILabel *)[self.view viewWithTag:[tagNum intValue]];
-            [label setBackgroundColor:[UIColor colorWithRed:0.92 green:0.60 blue:0.60 alpha:1.0]];
+            [label setBackgroundColor:[UIColor colorWithRed:0.92 green:0.60 blue:0.60 alpha:0.7]];
             [label setFont:[UIFont systemFontOfSize:label.font.pointSize]];
+        }
+        else
+        {
+            [label setBackgroundColor:[UIColor colorWithRed:0.529 green:0.988 blue:0.439 alpha:0.8]];
+            [label setFont:[UIFont boldSystemFontOfSize:label.font.pointSize]];
         }
     }
 }
@@ -141,7 +158,7 @@
                     animations: ^(void)
      {
          [label setFont:[UIFont boldSystemFontOfSize:label.font.pointSize]];
-         [label setBackgroundColor: [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1.0]];
+         [label setBackgroundColor: [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:0.7]];
      } completion:nil];
     [_highlight_info setObject:[NSNumber numberWithBool:true] forKey:[NSNumber numberWithInteger:label.tag]];
     
