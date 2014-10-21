@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "WordRepository.h"
+#import "IdentificationViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) WordRepository *repo;
 @end
 
 @implementation ViewController
@@ -17,11 +19,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _repo = [[WordRepository alloc] init];
+    [_repo gen_wordList];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)to_id:(id)sender
+{
+    [self performSegueWithIdentifier:@"identification" sender:nil];
+    
+}
+
+- (IBAction)to_sy:(id)sender
+{
+    [self performSegueWithIdentifier:@"synonmy" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"identification"])
+    {
+        IdentificationViewController *vc = segue.destinationViewController;
+        vc.repo = _repo;
+    }
+    else if([segue.identifier isEqualToString:@"synonmy"])
+    {
+        
+    }
 }
 
 @end

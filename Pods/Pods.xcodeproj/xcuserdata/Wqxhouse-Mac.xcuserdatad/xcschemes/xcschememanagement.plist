@@ -4,20 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>WordExpress.xcscheme</key>
+		<key>Pods-CHCSVParser.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>387C41D219F5C54000C41DCE</key>
+		<key>06658F38338EF32E0B984677</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>387C41EB19F5C54000C41DCE</key>
+		<key>E638CF3CF10825B9273E9F85</key>
 		<dict>
 			<key>primary</key>
 			<true/>

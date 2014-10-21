@@ -14,6 +14,14 @@
 		387C41E419F5C54000C41DCE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387C41E319F5C54000C41DCE /* Images.xcassets */; };
 		387C41E719F5C54000C41DCE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C41E519F5C54000C41DCE /* LaunchScreen.xib */; };
 		387C41F319F5C54000C41DCE /* WordExpressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C41F219F5C54000C41DCE /* WordExpressTests.m */; };
+		387C41FE19F5C5BB00C41DCE /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C41FD19F5C5BB00C41DCE /* Word.m */; };
+		387C420119F5C61A00C41DCE /* WordRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420019F5C61A00C41DCE /* WordRepository.m */; };
+		387C420419F5D0A500C41DCE /* IdentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420319F5D0A500C41DCE /* IdentificationViewController.m */; };
+		387C420719F5D1F000C41DCE /* TestEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420619F5D1F000C41DCE /* TestEntry.m */; };
+		387C420919F5D88E00C41DCE /* word.csv in Resources */ = {isa = PBXBuildFile; fileRef = 387C420819F5D88E00C41DCE /* word.csv */; };
+		387C420C19F5DC4200C41DCE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420B19F5DC4200C41DCE /* Utils.m */; };
+		387C420F19F5F10A00C41DCE /* Meaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420E19F5F10A00C41DCE /* Meaning.m */; };
+		7218636F4D06A132ACBE600A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A858E679FAD443A8729D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07A858E679FAD443A8729D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B078D8F72231ED83C0A466D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		387C41D319F5C54000C41DCE /* WordExpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordExpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387C41D719F5C54000C41DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387C41D819F5C54000C41DCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +50,20 @@
 		387C41EC19F5C54000C41DCE /* WordExpressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordExpressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		387C41F119F5C54000C41DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387C41F219F5C54000C41DCE /* WordExpressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordExpressTests.m; sourceTree = "<group>"; };
+		387C41FC19F5C5BB00C41DCE /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		387C41FD19F5C5BB00C41DCE /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		387C41FF19F5C61A00C41DCE /* WordRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordRepository.h; sourceTree = "<group>"; };
+		387C420019F5C61A00C41DCE /* WordRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordRepository.m; sourceTree = "<group>"; };
+		387C420219F5D0A500C41DCE /* IdentificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdentificationViewController.h; sourceTree = "<group>"; };
+		387C420319F5D0A500C41DCE /* IdentificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdentificationViewController.m; sourceTree = "<group>"; };
+		387C420519F5D1F000C41DCE /* TestEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntry.h; sourceTree = "<group>"; };
+		387C420619F5D1F000C41DCE /* TestEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntry.m; sourceTree = "<group>"; };
+		387C420819F5D88E00C41DCE /* word.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = word.csv; path = WordExpress/word.csv; sourceTree = "<group>"; };
+		387C420A19F5DC4200C41DCE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../Utils.h; sourceTree = "<group>"; };
+		387C420B19F5DC4200C41DCE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../Utils.m; sourceTree = "<group>"; };
+		387C420D19F5F10A00C41DCE /* Meaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meaning.h; sourceTree = "<group>"; };
+		387C420E19F5F10A00C41DCE /* Meaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meaning.m; sourceTree = "<group>"; };
+		B09AABF701FE1D097562F101 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7218636F4D06A132ACBE600A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30AA7FC2121E11A71703B49B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B078D8F72231ED83C0A466D /* Pods.debug.xcconfig */,
+				B09AABF701FE1D097562F101 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		387C41CA19F5C54000C41DCE = {
 			isa = PBXGroup;
 			children = (
+				387C420819F5D88E00C41DCE /* word.csv */,
 				387C41D519F5C54000C41DCE /* WordExpress */,
 				387C41EF19F5C54000C41DCE /* WordExpressTests */,
 				387C41D419F5C54000C41DCE /* Products */,
+				30AA7FC2121E11A71703B49B /* Pods */,
+				EB71780A75E831263B0E196A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +118,8 @@
 		387C41D519F5C54000C41DCE /* WordExpress */ = {
 			isa = PBXGroup;
 			children = (
+				387C420A19F5DC4200C41DCE /* Utils.h */,
+				387C420B19F5DC4200C41DCE /* Utils.m */,
 				387C41DA19F5C54000C41DCE /* AppDelegate.h */,
 				387C41DB19F5C54000C41DCE /* AppDelegate.m */,
 				387C41DD19F5C54000C41DCE /* ViewController.h */,
@@ -89,6 +128,16 @@
 				387C41E319F5C54000C41DCE /* Images.xcassets */,
 				387C41E519F5C54000C41DCE /* LaunchScreen.xib */,
 				387C41D619F5C54000C41DCE /* Supporting Files */,
+				387C41FC19F5C5BB00C41DCE /* Word.h */,
+				387C41FD19F5C5BB00C41DCE /* Word.m */,
+				387C41FF19F5C61A00C41DCE /* WordRepository.h */,
+				387C420019F5C61A00C41DCE /* WordRepository.m */,
+				387C420219F5D0A500C41DCE /* IdentificationViewController.h */,
+				387C420319F5D0A500C41DCE /* IdentificationViewController.m */,
+				387C420519F5D1F000C41DCE /* TestEntry.h */,
+				387C420619F5D1F000C41DCE /* TestEntry.m */,
+				387C420D19F5F10A00C41DCE /* Meaning.h */,
+				387C420E19F5F10A00C41DCE /* Meaning.m */,
 			);
 			path = WordExpress;
 			sourceTree = "<group>";
@@ -119,6 +168,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EB71780A75E831263B0E196A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A858E679FAD443A8729D47 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 387C41F619F5C54000C41DCE /* Build configuration list for PBXNativeTarget "WordExpress" */;
 			buildPhases = (
+				3224DAB4FCA050ED50C85363 /* Check Pods Manifest.lock */,
 				387C41CF19F5C54000C41DCE /* Sources */,
 				387C41D019F5C54000C41DCE /* Frameworks */,
 				387C41D119F5C54000C41DCE /* Resources */,
+				44F5D5AC76A74CD6EF747EFF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +260,7 @@
 			files = (
 				387C41E219F5C54000C41DCE /* Main.storyboard in Resources */,
 				387C41E719F5C54000C41DCE /* LaunchScreen.xib in Resources */,
+				387C420919F5D88E00C41DCE /* word.csv in Resources */,
 				387C41E419F5C54000C41DCE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,13 +274,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3224DAB4FCA050ED50C85363 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44F5D5AC76A74CD6EF747EFF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		387C41CF19F5C54000C41DCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387C420119F5C61A00C41DCE /* WordRepository.m in Sources */,
 				387C41DF19F5C54000C41DCE /* ViewController.m in Sources */,
+				387C420419F5D0A500C41DCE /* IdentificationViewController.m in Sources */,
+				387C420C19F5DC4200C41DCE /* Utils.m in Sources */,
+				387C41FE19F5C5BB00C41DCE /* Word.m in Sources */,
+				387C420719F5D1F000C41DCE /* TestEntry.m in Sources */,
 				387C41DC19F5C54000C41DCE /* AppDelegate.m in Sources */,
+				387C420F19F5F10A00C41DCE /* Meaning.m in Sources */,
 				387C41D919F5C54000C41DCE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +440,7 @@
 		};
 		387C41F719F5C54000C41DCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B078D8F72231ED83C0A466D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordExpress/Info.plist;
@@ -351,6 +451,7 @@
 		};
 		387C41F819F5C54000C41DCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09AABF701FE1D097562F101 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordExpress/Info.plist;
@@ -412,6 +513,7 @@
 				387C41F819F5C54000C41DCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		387C41F919F5C54000C41DCE /* Build configuration list for PBXNativeTarget "WordExpressTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +522,7 @@
 				387C41FB19F5C54000C41DCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
