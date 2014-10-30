@@ -58,6 +58,7 @@
             Word *last_word = [self.wordList lastObject];
             [last_word addMeaning:entry];
         }
+        prev_word = entry[0];
     }
     
     for(NSUInteger i = randomWordIndex + 1; i < words.count; i++)
@@ -73,7 +74,6 @@
             [_wordList addObject: word];
         }
     }
-    
 }
 
 - (void)gen_excelWordList

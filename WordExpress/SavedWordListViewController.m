@@ -7,6 +7,8 @@
 //
 
 #import "SavedWordListViewController.h"
+#import "Word.h"
+#import "WordDetailViewController.h"
 
 @interface SavedWordListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +36,33 @@
     {
         cell = [[[UITableViewCell alloc] init] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"saved"];
     }
+    Word *word = self.repo.wordList[indexPath.row];
+    cell.textLabel.text = word.word;
 
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.repo.wordList count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Word *word = self.repo.wordList[indexPath.row];
+    [self performSegueWithIdentifier:@"savedToWordDetail" sender:word];
 }
 
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[WordDetailViewController class]])
+    {
+        WordDetailViewController *vc = segue.destinationViewController;
+        vc.word = sender;
+    }
 }
-*/
 
 @end

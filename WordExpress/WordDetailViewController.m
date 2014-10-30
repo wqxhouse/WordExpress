@@ -37,7 +37,7 @@
         cell = [[[UITableViewCell alloc] init] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"saved"];
     }
     Meaning *meaning = self.word.meanings[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld. %@", indexPath.row, meaning.ch];
+    cell.textLabel.text = [NSString stringWithFormat:@"(%ld) %@", indexPath.row, meaning.ch];
     
     return cell;
 }
@@ -46,8 +46,6 @@
 {
     return [self.word.meanings count];
 }
-
-
 
 /*
 #pragma mark - Navigation
