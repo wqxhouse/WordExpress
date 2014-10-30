@@ -22,6 +22,7 @@
     self.wordLabel.text = self.word.word;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.scrollEnabled = false;
 }
 
 - (void)didReceiveMemoryWarning {

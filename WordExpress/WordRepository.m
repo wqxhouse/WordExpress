@@ -74,6 +74,11 @@
             [_wordList addObject: word];
         }
     }
+    [_wordList sortUsingComparator:^NSComparisonResult(Word *w1, Word *w2) {
+        NSString *s1 = w1.word;
+        NSString *s2 = w2.word;
+        return [s1 compare:s2];
+    }];
 }
 
 - (void)gen_excelWordList
