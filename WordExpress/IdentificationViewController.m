@@ -59,6 +59,12 @@
     [self clearUI];
     [self gen_data];
     [self loadUI];
+    
+    [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.ALabel.tag]];
+    [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.BLabel.tag]];
+    [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.CLabel.tag]];
+    [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.DLabel.tag]];
+    [_highlight_info setObject:[NSNumber numberWithBool:false] forKey:[NSNumber numberWithInteger:self.ELabel.tag]];
 }
 
 - (void) clearUI
@@ -194,20 +200,6 @@
             [self unboldFontForLabel: label];
             [self.userAnswer removeObject:@(label.tag - 100)];
         }
-    }
-    
-    switch (touch.view.tag) {
-        case 100:
-            break;
-        case 101:
-            break;
-        case 102:
-            break;
-        case 103:
-            break;
-        case 104:
-        default:
-            break;
     }
 }
 

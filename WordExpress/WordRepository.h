@@ -14,8 +14,11 @@
 
 @property (nonatomic, strong) NSMutableArray *wordList;
 @property (nonatomic, strong) NSMutableDictionary *wordAssoc;
+@property (nonatomic, strong) NSMutableArray *exWordList;
+@property (nonatomic, strong) NSMutableDictionary *exWordAssoc;
 
 - (void)gen_wordList;
+- (void)gen_excelWordList;
 - (Word *)getWord: (NSString *)word;
 - (NSArray *)randomWords: (int) number word:(NSString *)word;
 - (NSArray *)randomCh: (NSString *)word;

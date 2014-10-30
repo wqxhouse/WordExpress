@@ -21,20 +21,32 @@
     {
         _wordList = [[NSMutableArray alloc] init];
         _wordAssoc = [[NSMutableDictionary alloc] init];
+        _exWordAssoc = [[NSMutableDictionary alloc] init];
+        _exWordList = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)gen_wordList
 {
+    [_wordAssoc removeAllObjects];
+    [_wordList  removeAllObjects];
+    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"word" ofType:@"csv"];
     NSURL *url = [NSURL URLWithString:[@"file://" stringByAppendingString: filePath]];
     NSArray *words = [NSArray arrayWithContentsOfCSVURL:url];
    
     NSString *prev_word = @"";
+    NSUInteger randomWordIndex = -1;
     for(int i = 0; i < words.count; i++)
     {
         NSArray *entry = words[i];
+        if([entry[0] isEqualToString:@"// random"])
+        {
+            randomWordIndex = i;
+            break;
+        }
+        
         if(![entry[1] isEqualToString:@""] && ![prev_word isEqualToString:entry[0]])
         {
             Word *word = [[Word alloc] initWithArray:entry];
@@ -46,6 +58,80 @@
             Word *last_word = [self.wordList lastObject];
             [last_word addMeaning:entry];
         }
+    }
+    
+    for(NSUInteger i = randomWordIndex + 1; i < words.count; i++)
+    {
+        Word *word = [_exWordAssoc objectForKey: words[i][0]];
+        if(word == nil)
+        {
+            continue;
+        }
+        else
+        {
+            [_wordAssoc setObject: word forKey:word.word];
+            [_wordList addObject: word];
+        }
+    }
+    
+}
+
+- (void)gen_excelWordList
+{
+    [_exWordAssoc removeAllObjects];
+    [_exWordList  removeAllObjects];
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"excelwords" ofType:@"csv"];
+    NSURL *url = [NSURL URLWithString:[@"file://" stringByAppendingString: filePath]];
+    NSArray *words = [NSArray arrayWithContentsOfCSVURL:url];
+    for(int i = 0; i < [words count]; i++)
+    {
+        NSArray *entry = words[i];
+        Word *word = [[Word alloc] init];
+        word.word = entry[0];
+        
+        NSString *meaning_data = entry[1];
+        NSArray *meanings_arr = [meaning_data componentsSeparatedByString:@";"];
+        // trim strings
+        for(int j = 0; j < [meanings_arr count]; j++)
+        {
+            NSString *meaning = meanings_arr[j];
+            NSString *trimmed = [meaning stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            if([trimmed isEqualToString:@""])
+            {
+                continue;
+            }
+            
+            NSMutableArray *pair = [[trimmed componentsSeparatedByString:@":"] mutableCopy];
+            
+            for(int z = 0; z < [pair count]; z++)
+            {
+                NSString *trimmed_1 = [pair[z] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                pair[z] = trimmed_1;
+            }
+            
+            Meaning *_meaning = [[Meaning alloc] init];
+            _meaning.ch = pair[0];
+            
+            // split synonmy
+            if([pair count] > 1)
+            {
+                NSMutableArray *synonmyArr = [[pair[1] componentsSeparatedByString:@","] mutableCopy];
+                for(int i = 0; i < [synonmyArr count]; i++)
+                {
+                    NSString *trimmedStr = [synonmyArr[i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                    synonmyArr[i] = trimmedStr;
+                    _meaning.sym_arr = synonmyArr;
+                }
+            }
+            else
+            {
+                _meaning.sym_arr = [[NSMutableArray alloc] init];
+            }
+            [word.meanings addObject:_meaning];
+        }
+        [_exWordAssoc setObject:word forKeyedSubscript:word.word];
+        [_exWordList addObject:word];
     }
 }
 

@@ -10,6 +10,7 @@
 #import "WordRepository.h"
 #import "IdentificationViewController.h"
 #import "SynonmyViewController.h"
+#import "WordListTabBarController.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) WordRepository *repo;
@@ -21,9 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _repo = [[WordRepository alloc] init];
+    
+    [_repo gen_excelWordList];
     [_repo gen_wordList];
-    
-    
+}
+
+- (IBAction)wordListClicked: (id)sender
+{
+    [self performSegueWithIdentifier:@"ShowWordList" sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +59,24 @@
     {
         SynonmyViewController *vc = segue.destinationViewController;
         vc.repo = _repo;
+    }
+    else if([segue.identifier isEqualToString:@"ShowWordList"])
+    {
+        WordListTabBarController *tabVC = segue.destinationViewController;
+        tabVC.repo = _repo;
+    }
+}
+
+#pragma mark SettingsDelegate
+- (void)changeWordSource: (NSInteger)wordSource
+{
+    if(wordSource == 0)
+    {
+        [self.repo gen_wordList];
+    }
+    else if(wordSource == 1)
+    {
+        [self.repo gen_excelWordList];
     }
 }
 

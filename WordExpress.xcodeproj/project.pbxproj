@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383C395119F750C30074428F /* excelwords.csv in Resources */ = {isa = PBXBuildFile; fileRef = 383C395019F750C30074428F /* excelwords.csv */; };
 		387C41D919F5C54000C41DCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C41D819F5C54000C41DCE /* main.m */; };
 		387C41DC19F5C54000C41DCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C41DB19F5C54000C41DCE /* AppDelegate.m */; };
 		387C41DF19F5C54000C41DCE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C41DE19F5C54000C41DCE /* ViewController.m */; };
@@ -21,6 +22,11 @@
 		387C420919F5D88E00C41DCE /* word.csv in Resources */ = {isa = PBXBuildFile; fileRef = 387C420819F5D88E00C41DCE /* word.csv */; };
 		387C420C19F5DC4200C41DCE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420B19F5DC4200C41DCE /* Utils.m */; };
 		387C420F19F5F10A00C41DCE /* Meaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 387C420E19F5F10A00C41DCE /* Meaning.m */; };
+		38D16A0D1A02D81B004D610A /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D16A0C1A02D81B004D610A /* WordListViewController.m */; };
+		38D16A101A02DBDC004D610A /* SavedWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D16A0F1A02DBDC004D610A /* SavedWordListViewController.m */; };
+		38D16A131A02DC2E004D610A /* AllWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D16A121A02DC2E004D610A /* AllWordListViewController.m */; };
+		38D16A161A02DFEA004D610A /* WordListTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D16A151A02DFEA004D610A /* WordListTabBarController.m */; };
+		38D16A191A02E542004D610A /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D16A181A02E542004D610A /* WordDetailViewController.m */; };
 		38DA44EB19F63BDA0074291A /* SynonmyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA44EA19F63BDA0074291A /* SynonmyViewController.m */; };
 		38DA44EE19F6439F0074291A /* SelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA44ED19F6439F0074291A /* SelectionTableViewCell.m */; };
 		7218636F4D06A132ACBE600A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A858E679FAD443A8729D47 /* libPods.a */; };
@@ -39,6 +45,7 @@
 /* Begin PBXFileReference section */
 		07A858E679FAD443A8729D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B078D8F72231ED83C0A466D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		383C395019F750C30074428F /* excelwords.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = excelwords.csv; sourceTree = "<group>"; };
 		387C41D319F5C54000C41DCE /* WordExpress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordExpress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		387C41D719F5C54000C41DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387C41D819F5C54000C41DCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,6 +72,16 @@
 		387C420B19F5DC4200C41DCE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../Utils.m; sourceTree = "<group>"; };
 		387C420D19F5F10A00C41DCE /* Meaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meaning.h; sourceTree = "<group>"; };
 		387C420E19F5F10A00C41DCE /* Meaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meaning.m; sourceTree = "<group>"; };
+		38D16A0B1A02D81B004D610A /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		38D16A0C1A02D81B004D610A /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
+		38D16A0E1A02DBDC004D610A /* SavedWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedWordListViewController.h; sourceTree = "<group>"; };
+		38D16A0F1A02DBDC004D610A /* SavedWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedWordListViewController.m; sourceTree = "<group>"; };
+		38D16A111A02DC2E004D610A /* AllWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllWordListViewController.h; sourceTree = "<group>"; };
+		38D16A121A02DC2E004D610A /* AllWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllWordListViewController.m; sourceTree = "<group>"; };
+		38D16A141A02DFEA004D610A /* WordListTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListTabBarController.h; sourceTree = "<group>"; };
+		38D16A151A02DFEA004D610A /* WordListTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListTabBarController.m; sourceTree = "<group>"; };
+		38D16A171A02E542004D610A /* WordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
+		38D16A181A02E542004D610A /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		38DA44E919F63BDA0074291A /* SynonmyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynonmyViewController.h; sourceTree = "<group>"; };
 		38DA44EA19F63BDA0074291A /* SynonmyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynonmyViewController.m; sourceTree = "<group>"; };
 		38DA44EC19F6439F0074291A /* SelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionTableViewCell.h; sourceTree = "<group>"; };
@@ -103,6 +120,7 @@
 		387C41CA19F5C54000C41DCE = {
 			isa = PBXGroup;
 			children = (
+				383C395019F750C30074428F /* excelwords.csv */,
 				387C420819F5D88E00C41DCE /* word.csv */,
 				387C41D519F5C54000C41DCE /* WordExpress */,
 				387C41EF19F5C54000C41DCE /* WordExpressTests */,
@@ -131,8 +149,8 @@
 				387C41DD19F5C54000C41DCE /* ViewController.h */,
 				387C41DE19F5C54000C41DCE /* ViewController.m */,
 				387C41E019F5C54000C41DCE /* Main.storyboard */,
-				387C41E319F5C54000C41DCE /* Images.xcassets */,
 				387C41E519F5C54000C41DCE /* LaunchScreen.xib */,
+				387C41E319F5C54000C41DCE /* Images.xcassets */,
 				387C41D619F5C54000C41DCE /* Supporting Files */,
 				387C41FC19F5C5BB00C41DCE /* Word.h */,
 				387C41FD19F5C5BB00C41DCE /* Word.m */,
@@ -148,6 +166,16 @@
 				38DA44EA19F63BDA0074291A /* SynonmyViewController.m */,
 				38DA44EC19F6439F0074291A /* SelectionTableViewCell.h */,
 				38DA44ED19F6439F0074291A /* SelectionTableViewCell.m */,
+				38D16A0B1A02D81B004D610A /* WordListViewController.h */,
+				38D16A0C1A02D81B004D610A /* WordListViewController.m */,
+				38D16A0E1A02DBDC004D610A /* SavedWordListViewController.h */,
+				38D16A0F1A02DBDC004D610A /* SavedWordListViewController.m */,
+				38D16A111A02DC2E004D610A /* AllWordListViewController.h */,
+				38D16A121A02DC2E004D610A /* AllWordListViewController.m */,
+				38D16A141A02DFEA004D610A /* WordListTabBarController.h */,
+				38D16A151A02DFEA004D610A /* WordListTabBarController.m */,
+				38D16A171A02E542004D610A /* WordDetailViewController.h */,
+				38D16A181A02E542004D610A /* WordDetailViewController.m */,
 			);
 			path = WordExpress;
 			sourceTree = "<group>";
@@ -272,6 +300,7 @@
 				387C41E219F5C54000C41DCE /* Main.storyboard in Resources */,
 				387C41E719F5C54000C41DCE /* LaunchScreen.xib in Resources */,
 				387C420919F5D88E00C41DCE /* word.csv in Resources */,
+				383C395119F750C30074428F /* excelwords.csv in Resources */,
 				387C41E419F5C54000C41DCE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,12 +354,17 @@
 			files = (
 				38DA44EB19F63BDA0074291A /* SynonmyViewController.m in Sources */,
 				387C420119F5C61A00C41DCE /* WordRepository.m in Sources */,
+				38D16A0D1A02D81B004D610A /* WordListViewController.m in Sources */,
+				38D16A191A02E542004D610A /* WordDetailViewController.m in Sources */,
 				387C41DF19F5C54000C41DCE /* ViewController.m in Sources */,
 				387C420419F5D0A500C41DCE /* IdentificationViewController.m in Sources */,
 				387C420C19F5DC4200C41DCE /* Utils.m in Sources */,
 				387C41FE19F5C5BB00C41DCE /* Word.m in Sources */,
 				387C420719F5D1F000C41DCE /* TestEntry.m in Sources */,
 				387C41DC19F5C54000C41DCE /* AppDelegate.m in Sources */,
+				38D16A101A02DBDC004D610A /* SavedWordListViewController.m in Sources */,
+				38D16A131A02DC2E004D610A /* AllWordListViewController.m in Sources */,
+				38D16A161A02DFEA004D610A /* WordListTabBarController.m in Sources */,
 				38DA44EE19F6439F0074291A /* SelectionTableViewCell.m in Sources */,
 				387C420F19F5F10A00C41DCE /* Meaning.m in Sources */,
 				387C41D919F5C54000C41DCE /* main.m in Sources */,

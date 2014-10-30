@@ -14,6 +14,17 @@ static int highest_id = 0;
 
 @implementation Word
 
+- (instancetype)init
+{
+    self = [super init];
+    if(self)
+    {
+        __id = [NSNumber numberWithInt: highest_id++];
+        _meanings = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (instancetype)initWithArray: (NSArray *)arr;
 {
     self = [super init];
