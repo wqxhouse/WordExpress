@@ -109,7 +109,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"word contains[cd] %@", searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"word beginswith[cd] %@", searchText];
     self.searchResults = [self.repo.exWordList filteredArrayUsingPredicate:resultPredicate];
 }
 
