@@ -37,7 +37,8 @@
     
     gradient.colors = @[(id)startColor.CGColor, (id)endColor.CGColor];
     [backgroundView.layer addSublayer:gradient];
-    self.tableView.backgroundView = backgroundView;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    [self.view insertSubview:backgroundView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {

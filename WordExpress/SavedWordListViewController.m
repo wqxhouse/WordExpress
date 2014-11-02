@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *searchResults;
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *navbar;
+
 @end
 
 @implementation SavedWordListViewController
@@ -39,7 +41,24 @@
     
     gradient.colors = @[(id)startColor.CGColor, (id)endColor.CGColor];
     [backgroundView.layer addSublayer:gradient];
-    self.tableView.backgroundView = backgroundView;
+    [self.view insertSubview:backgroundView atIndex:0];
+    self.tableView.backgroundColor = [UIColor clearColor];
+//    self.tableView.backgroundView = backgroundView;
+    
+    
+}
+
+- (void)setNavigationBarColor
+{
+    [self.navbar setBarTintColor:[UIColor colorWithRed:0.0f green:0.0f blue:90.0f/255.0f alpha:1]];
+    
+    const CGFloat statusBarHeight = 20;    //  Make this dynamic in your own code...
+    
+    UIView* underlayView = [[UIView alloc] initWithFrame:CGRectMake(0, -statusBarHeight, self.navbar.frame.size.width, self.navbar.frame.size.height + statusBarHeight)];
+    [underlayView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+    [underlayView setBackgroundColor:[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f]];
+    [underlayView setAlpha:0.0f];
+    [self.navbar insertSubview:underlayView atIndex:1];
 }
 
 

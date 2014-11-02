@@ -26,17 +26,21 @@
     self.tableView.scrollEnabled = false;
     if(self.saved)
     {
-        [self.saveButton setTitle:@"UnSave" forState:UIControlStateNormal];
+        //[self.saveButton setTitle:@"UnSave" forState:UIControlStateNormal];
+        UIImage *img = [UIImage imageNamed:@"Star_full"];
+        [self.saveButton setImage:img forState:UIControlStateNormal];
     }
     else
     {
-        [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
+        //[self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
+        [self.saveButton setImage:[UIImage imageNamed:@"Star_empty"] forState:UIControlStateNormal];
     }
     
     // set swipe
     UISwipeGestureRecognizer *swipeLeftGesture=[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeGesture:)];
     [self.view addGestureRecognizer:swipeLeftGesture];
     swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionDown;
+    self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 -(void)handleSwipeGesture:(UIGestureRecognizer *) sender
@@ -65,6 +69,7 @@
     }
     Meaning *meaning = self.word.meanings[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"(%ld) %@", indexPath.row, meaning.ch];
+    [cell setBackgroundColor:[UIColor clearColor]];
     
     return cell;
 }
@@ -79,13 +84,15 @@
     UIButton *btn = sender;
     if(self.saved)
     {
-        [btn setTitle:@"Save" forState:UIControlStateNormal];
+        //[btn setTitle:@"Save" forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"Star_empty"] forState:UIControlStateNormal];
         [self.delegate unsaveWord:self.word];
         self.saved = false;
     }
     else
     {
-        [btn setTitle:@"Unsave" forState:UIControlStateNormal];
+        //[btn setTitle:@"Unsave" forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"Star_full"] forState:UIControlStateNormal];
         [self.delegate saveWord:self.word];
         self.saved = true;
     }
