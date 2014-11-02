@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Meaning : NSObject
+@interface Meaning : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSString *ch;
 @property (nonatomic, strong) NSArray *sym_arr;

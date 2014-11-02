@@ -12,6 +12,7 @@
 @interface WordDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @end
 
 @implementation WordDetailViewController
@@ -23,6 +24,31 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.scrollEnabled = false;
+    if(self.saved)
+    {
+        [self.saveButton setTitle:@"UnSave" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
+    }
+    
+    // set swipe
+    UISwipeGestureRecognizer *swipeLeftGesture=[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeGesture:)];
+    [self.view addGestureRecognizer:swipeLeftGesture];
+    swipeLeftGesture.direction = UISwipeGestureRecognizerDirectionDown;
+}
+
+-(void)handleSwipeGesture:(UIGestureRecognizer *) sender
+{
+    NSUInteger touches = sender.numberOfTouches;
+    if (touches == 1)
+    {
+        if (sender.state == UIGestureRecognizerStateEnded)
+        {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +72,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.word.meanings count];
+}
+
+- (IBAction)saveButtonClicked:(id)sender
+{
+    UIButton *btn = sender;
+    if(self.saved)
+    {
+        [btn setTitle:@"Save" forState:UIControlStateNormal];
+        [self.delegate unsaveWord:self.word];
+        self.saved = false;
+    }
+    else
+    {
+        [btn setTitle:@"Unsave" forState:UIControlStateNormal];
+        [self.delegate saveWord:self.word];
+        self.saved = true;
+    }
+    
 }
 
 /*

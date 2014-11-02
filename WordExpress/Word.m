@@ -25,6 +25,25 @@ static int highest_id = 0;
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if(self)
+    {
+        __id = [aDecoder decodeObjectForKey:@"_id"];
+        _meanings = [aDecoder decodeObjectForKey:@"meanings"];
+        _word = [aDecoder decodeObjectForKey:@"word"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:__id forKey:@"_id"];
+    [aCoder encodeObject:_meanings forKey:@"meanings"];
+    [aCoder encodeObject:_word forKey:@"word"];
+}
+
 - (instancetype)initWithArray: (NSArray *)arr;
 {
     self = [super init];

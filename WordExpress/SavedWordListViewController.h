@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "WordRepository.h"
+#import "WordDetailViewController.h"
 
-@interface SavedWordListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface SavedWordListViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, WordDetailDelegate>
 @property (strong, nonatomic) WordRepository *repo;
 @end

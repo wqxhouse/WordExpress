@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class Meaning;
-@interface Word : NSObject
+@interface Word : NSObject<NSCoding>
 
 @property (nonatomic, strong) NSString *word;
 @property (nonatomic, strong) NSNumber *_id;

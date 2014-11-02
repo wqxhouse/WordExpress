@@ -19,14 +19,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-pc-Utt">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_select" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-CE-x7K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_select" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-CE-x7K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-hO-xA1">
-                                <rect key="frame" x="76" y="72" width="168" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-hO-xA1">
+                                <rect key="frame" x="76" y="137" width="168" height="71"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                 <state key="normal" title="Identification">
                                     <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,8 +35,8 @@
                                     <action selector="to_id:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZrQ-Nn-17x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-hY-jFi">
-                                <rect key="frame" x="104" y="248" width="113" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-hY-jFi">
+                                <rect key="frame" x="104" y="280" width="113" height="71"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                 <state key="normal" title="Synonym">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,8 +46,8 @@
                                     <action selector="to_sy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tc4-Ru-BT1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-fW-tVn">
-                                <rect key="frame" x="86" y="378" width="153" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-fW-tVn">
+                                <rect key="frame" x="84" y="414" width="153" height="90"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="50"/>
                                 <state key="normal" title="WordList">
                                     <color key="titleColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
@@ -60,48 +59,34 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="gPf-fW-tVn" secondAttribute="centerX" id="3w1-Sc-Cr6"/>
+                            <constraint firstItem="gPf-fW-tVn" firstAttribute="top" secondItem="Gci-hY-jFi" secondAttribute="bottom" constant="63" id="81K-Hv-rGB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="OhW-CE-x7K" secondAttribute="bottom" id="BbH-5P-RtB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OhW-CE-x7K" secondAttribute="trailing" constant="-16" id="GPc-UC-nPu"/>
+                            <constraint firstItem="Gci-hY-jFi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="216" id="Pho-Gb-Udv"/>
+                            <constraint firstItem="OhW-CE-x7K" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="QYs-eH-3pe"/>
+                            <constraint firstItem="aZM-hO-xA1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="73" id="UaX-gP-gZH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gci-hY-jFi" secondAttribute="trailing" constant="87" id="bKw-aG-9mR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gci-hY-jFi" secondAttribute="bottom" constant="217" id="cxX-yM-GQg"/>
+                            <constraint firstItem="Gci-hY-jFi" firstAttribute="top" secondItem="aZM-hO-xA1" secondAttribute="bottom" constant="72" id="jbt-pC-Mpx"/>
+                            <constraint firstAttribute="centerX" secondItem="aZM-hO-xA1" secondAttribute="centerX" id="m4Y-Nt-ggy"/>
+                            <constraint firstItem="Gci-hY-jFi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="88" id="qOY-sj-kQ0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gPf-fW-tVn" secondAttribute="bottom" constant="64" id="tsl-Ui-Y6G"/>
+                            <constraint firstItem="OhW-CE-x7K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="vYw-8U-acT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Modes" id="6po-iE-oJL"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="0ty-3s-ZHT" kind="push" identifier="identification" id="bpJ-s7-28f"/>
                         <segue destination="KRq-2E-7bD" kind="push" identifier="Synonym" id="PRV-HV-TAQ"/>
-                        <segue destination="UIB-NR-PI9" kind="show" identifier="ShowWordList" id="8t6-jY-ggb"/>
+                        <segue destination="UIB-NR-PI9" kind="showDetail" identifier="ShowWordList" id="8t6-jY-ggb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="328"/>
-        </scene>
-        <!--All-->
-        <scene sceneID="eh3-IN-8lP">
-            <objects>
-                <viewController id="BnW-4U-Aiw" customClass="AllWordListViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="966-00-vXU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ue0-Qc-Li0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Z9e-r1-EsL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hop-HU-YNI">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="All" id="ErA-8C-c8s"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="tableView" destination="Hop-HU-YNI" id="Qlf-vJ-N1b"/>
-                        <segue destination="NB9-Cf-R8v" kind="showDetail" identifier="allToWordDetail" id="Idx-Ga-XDF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BAo-Gm-lV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1252" y="1630"/>
         </scene>
         <!--Word Detail View Controller-->
         <scene sceneID="xvg-xU-FiR">
@@ -116,9 +101,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mJ-O1-Ibw">
-                                <rect key="frame" x="16" y="28" width="101" height="63"/>
+                                <rect key="frame" x="16" y="28" width="300" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="KF9-9A-ZUx"/>
+                                    <constraint firstAttribute="width" constant="300" id="KF9-9A-ZUx"/>
                                     <constraint firstAttribute="height" constant="63" id="UP3-ql-wkZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="34"/>
@@ -131,6 +116,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ic-Kp-g1D">
                                 <rect key="frame" x="270" y="45" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="NB9-Cf-R8v" eventType="touchUpInside" id="ICP-P8-TDt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,18 +135,19 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="saveButton" destination="0ic-Kp-g1D" id="mKu-fR-LFg"/>
                         <outlet property="tableView" destination="fPJ-MC-lNO" id="hUT-ub-SjB"/>
                         <outlet property="wordLabel" destination="9mJ-O1-Ibw" id="eaM-cb-YlZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A4S-M1-k3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="1630"/>
+            <point key="canvasLocation" x="1712" y="1594"/>
         </scene>
-        <!--Saved-->
+        <!--Star Words-->
         <scene sceneID="MIC-Es-XY0">
             <objects>
-                <viewController id="R1V-9Q-BTc" customClass="SavedWordListViewController" sceneMemberID="viewController">
+                <viewController title="Star Words" id="R1V-9Q-BTc" customClass="SavedWordListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gF7-YQ-trc"/>
                         <viewControllerLayoutGuide type="bottom" id="b5j-CU-IT5"/>
@@ -167,28 +156,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-Km-xAH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5rg-yt-Hpa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="DDi-ab-i1B">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="R1V-9Q-BTc" id="sWN-D3-vYg"/>
+                                    </connections>
+                                </searchBar>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK1-oe-zxr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.78431379795074463" green="0.78431379795074463" blue="0.80392163991928101" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5rg-yt-Hpa" firstAttribute="bottom" secondItem="b5j-CU-IT5" secondAttribute="top" id="2XJ-Es-7th"/>
+                            <constraint firstItem="yK1-oe-zxr" firstAttribute="bottom" secondItem="gF7-YQ-trc" secondAttribute="bottom" id="7OU-66-4GL"/>
+                            <constraint firstAttribute="trailing" secondItem="yK1-oe-zxr" secondAttribute="trailing" id="CYh-mV-PnZ"/>
+                            <constraint firstItem="yK1-oe-zxr" firstAttribute="leading" secondItem="5rg-yt-Hpa" secondAttribute="leading" id="KcI-cP-6JD"/>
+                            <constraint firstItem="5rg-yt-Hpa" firstAttribute="leading" secondItem="XZS-Hz-JzL" secondAttribute="leading" id="Rma-fE-2dk"/>
+                            <constraint firstItem="yK1-oe-zxr" firstAttribute="top" secondItem="XZS-Hz-JzL" secondAttribute="top" id="n7Q-qL-6ro"/>
+                            <constraint firstItem="5rg-yt-Hpa" firstAttribute="top" secondItem="gF7-YQ-trc" secondAttribute="bottom" id="qVF-vo-P3r"/>
+                            <constraint firstItem="5rg-yt-Hpa" firstAttribute="trailing" secondItem="yK1-oe-zxr" secondAttribute="trailing" id="zYI-V8-WPS"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Saved" id="6g9-xH-lff"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="6g9-xH-lff"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="tableView" destination="qhQ-Km-xAH" id="PQg-i2-una"/>
+                        <outlet property="searchBar" destination="DDi-ab-i1B" id="QAb-La-EEJ"/>
+                        <outlet property="searchDisplayController" destination="sc1-h5-B0k" id="pKV-5D-X5g"/>
+                        <outlet property="tableView" destination="5rg-yt-Hpa" id="OuU-3q-h2e"/>
                         <segue destination="NB9-Cf-R8v" kind="showDetail" identifier="savedToWordDetail" id="b15-cl-ScT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcz-Tl-fcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="sc1-h5-B0k">
+                    <connections>
+                        <outlet property="delegate" destination="R1V-9Q-BTc" id="v0L-qf-Bj5"/>
+                        <outlet property="searchBar" destination="DDi-ab-i1B" id="4bu-mL-nST"/>
+                        <outlet property="searchContentsController" destination="R1V-9Q-BTc" id="e7h-Xd-Xbm"/>
+                        <outlet property="searchResultsDataSource" destination="R1V-9Q-BTc" id="8TD-b2-dGq"/>
+                        <outlet property="searchResultsDelegate" destination="R1V-9Q-BTc" id="3Mz-tx-ai2"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1252" y="999"/>
+            <point key="canvasLocation" x="1024" y="1143"/>
         </scene>
         <!--Word List Tab Bar Controller-->
         <scene sceneID="wr2-us-8ST">
             <objects>
                 <tabBarController id="UIB-NR-PI9" customClass="WordListTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wKi-B2-SAw"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="u5W-2R-UIr">
@@ -198,12 +221,82 @@
                     </tabBar>
                     <connections>
                         <segue destination="R1V-9Q-BTc" kind="relationship" relationship="viewControllers" id="weh-xb-J7K"/>
-                        <segue destination="BnW-4U-Aiw" kind="relationship" relationship="viewControllers" id="SWb-xg-a1I"/>
+                        <segue destination="Ox0-WG-pmz" kind="relationship" relationship="viewControllers" id="Dgs-MJ-Hvu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNU-5I-ZRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="1308"/>
+            <point key="canvasLocation" x="327" y="1496"/>
+        </scene>
+        <!--All Word List View Controller-->
+        <scene sceneID="2R1-Oi-ryN">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ox0-WG-pmz" customClass="AllWordListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E88-l2-ygS"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdZ-T5-PhB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYf-z5-5Ot">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TO-dx-HuB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.7882353663444519" green="0.7882353663444519" blue="0.80784320831298828" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nyF-6G-OzK">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="LYB-JE-Ynt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Ox0-WG-pmz" id="DUe-od-Ddw"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saved" id="9Hi-8r-xJ9">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Hi-8r-xJ9" id="2ce-zc-M9U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0TO-dx-HuB" firstAttribute="leading" secondItem="nyF-6G-OzK" secondAttribute="leading" id="9bo-eD-Fz5"/>
+                            <constraint firstItem="0TO-dx-HuB" firstAttribute="bottom" secondItem="E88-l2-ygS" secondAttribute="bottom" id="E2Z-rx-QKa"/>
+                            <constraint firstAttribute="trailing" secondItem="nyF-6G-OzK" secondAttribute="trailing" id="Ikb-Lj-n0R"/>
+                            <constraint firstItem="nyF-6G-OzK" firstAttribute="top" secondItem="E88-l2-ygS" secondAttribute="bottom" id="Qnf-lf-iCv"/>
+                            <constraint firstItem="0TO-dx-HuB" firstAttribute="top" secondItem="aYf-z5-5Ot" secondAttribute="top" id="XYg-dj-FPl"/>
+                            <constraint firstItem="nyF-6G-OzK" firstAttribute="bottom" secondItem="qdZ-T5-PhB" secondAttribute="top" id="cs5-rd-gBV"/>
+                            <constraint firstItem="nyF-6G-OzK" firstAttribute="trailing" secondItem="0TO-dx-HuB" secondAttribute="trailing" id="k3G-sD-LWR"/>
+                            <constraint firstItem="nyF-6G-OzK" firstAttribute="leading" secondItem="aYf-z5-5Ot" secondAttribute="leading" id="q7c-4D-cF0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="ZGX-qg-03s"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bqy-fE-nk7" id="eeA-wo-zQ0"/>
+                        <outlet property="tableView" destination="nyF-6G-OzK" id="laB-uw-LRB"/>
+                        <segue destination="NB9-Cf-R8v" kind="showDetail" identifier="allToWordDetail" id="Hpw-dt-Xf0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXi-in-qAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bqy-fE-nk7">
+                    <connections>
+                        <outlet property="delegate" destination="Ox0-WG-pmz" id="sKt-dH-oo6"/>
+                        <outlet property="searchBar" destination="LYB-JE-Ynt" id="0iS-td-XPj"/>
+                        <outlet property="searchContentsController" destination="Ox0-WG-pmz" id="hCq-1m-j0H"/>
+                        <outlet property="searchResultsDataSource" destination="Ox0-WG-pmz" id="9iJ-Ui-9eT"/>
+                        <outlet property="searchResultsDelegate" destination="Ox0-WG-pmz" id="rUw-gb-yuA"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1024" y="1840"/>
         </scene>
         <!--Synonym-->
         <scene sceneID="Zz4-pm-Zcg">
@@ -366,6 +459,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gmE-LY-kV1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="i6T-y1-5he"/>
                     </connections>
@@ -380,6 +476,6 @@
         <image name="Background_select" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Idx-Ga-XDF"/>
+        <segue reference="Hpw-dt-Xf0"/>
     </inferredMetricsTieBreakers>
 </document>
