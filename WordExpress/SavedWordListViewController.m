@@ -24,7 +24,24 @@
     // Do any additional setup after loading the view.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    UIView *backgroundView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = backgroundView.bounds;
+    UIColor *startColor = [UIColor colorWithRed: 90./255.
+                                          green:200./255.
+                                           blue:251./255.
+                                          alpha:1.0];
+    UIColor *endColor   = [UIColor colorWithRed: 82./255.
+                                          green:237./255.
+                                           blue:199./255.
+                                          alpha:1.0];
+    
+    gradient.colors = @[(id)startColor.CGColor, (id)endColor.CGColor];
+    [backgroundView.layer addSublayer:gradient];
+    self.tableView.backgroundView = backgroundView;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,6 +58,10 @@
 {
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"word contains[cd] %@", searchText];
     self.searchResults = [self.repo.wordList filteredArrayUsingPredicate:resultPredicate];
+}
+- (IBAction)mainButtonClicked:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,9 +81,11 @@
         word = self.repo.wordList[indexPath.row];
     }
     cell.textLabel.text = word.word;
+    cell.backgroundColor = [UIColor clearColor];
 
     return cell;
 }
+
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
